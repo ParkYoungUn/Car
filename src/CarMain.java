@@ -10,7 +10,6 @@ public class CarMain {
     	tivoli.Accelerator();
     	tivoli.BreakDwon();
     	tivoli.blink();
-    	tivoli.blink();
     	//
         //속성 5개 이상
         //메서드 5개 이상
