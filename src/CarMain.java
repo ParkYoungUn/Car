@@ -10,9 +10,9 @@ public class CarMain {
     	tivoli.Accelerator();
     	tivoli.BreakDwon();
     	tivoli.blink();
-    	// ÈÄ,....ktl;asjg;zxjl;gk/z
-        //¼Ó¼º 5°³ ÀÌ»ó
-        //¸Ş¼­µå 5°³ ÀÌ»ó
-        // ¿øÇÏ´Â°Å ¸¸µé¾î¿À±â
+    	
+    	//ì†ì„± 5ê°œ ì´ìƒ
+        //ë©”ì„œë“œ 5ê°œ ì´ìƒ
+        // ì›í•˜ëŠ”ê±° ë§Œë“¤ì–´ì˜¤ê¸°
     }
 }

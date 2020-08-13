@@ -2,69 +2,69 @@ import java.util.Scanner;
 
 public class CarSystem {
 
-	boolean start; // ½Ãµ¿
-	int carBreak = 1; // ºê·¹ÀÌÅ©
-	int speed; // Â÷·® ¼Óµµ
-	int gear; // Â÷·® ±â¾î
-	String blink = "< >"; // ±ôºıÀÌ(ºñ»óµî)
+	boolean start; // ì‹œë™
+	int carBreak = 1; // ë¸Œë ˆì´í¬
+	int speed; // ì°¨ëŸ‰ ì†ë„
+	int gear; // ì°¨ëŸ‰ ê¸°ì–´
+	String blink = "< >"; // ê¹œë¹¡ì´(ë¹„ìƒë“±)
 	
 	Scanner Input = new Scanner(System.in);
 	
-	void BreakDwon() { // ºê·¹ÀÌÅ© »óÅÂ
+	void BreakDwon() { // ë¸Œë ˆì´í¬ ìƒíƒœ
 		carBreak = 0;
-		System.out.println("ÇöÀç ºê·¹ÀÌÅ© »óÅÂ: "+carBreak);
+		System.out.println("í˜„ì¬ ë¸Œë ˆì´í¬ ìƒíƒœ: "+carBreak);
 	}
 	
-	void Start() { // ½Ãµ¿ ¸Ş¼­µå
+	void Start() { // ì‹œë™ ë©”ì„œë“œ
 		if(carBreak == 0) {
 			start = !start;
 		}
-		System.out.println("ÇöÀç ½Ãµ¿ »óÅÂ: " +start);
+		System.out.println("í˜„ì¬ ì‹œë™ ìƒíƒœ: " +start);
 	}
 	
-	void Accelerator() { // °¡¼ÓÆĞ´Ş ¿ªÇÒ
+	void Accelerator() { // ê°€ì†íŒ¨ë‹¬ ì—­í• 
 		carBreak = 1;
-		System.out.println("ÇöÀç ±â¾î¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä: ");
-		int accAmount = Input.nextInt();	// °¡¼ÓÀÇ Á¤µµ¸¦ ÀÔ·Â
+		System.out.println("í˜„ì¬ ê¸°ì–´ë¥¼ ì…ë ¥í•´ì£¼ì„¸ìš”: ");
+		int accAmount = Input.nextInt();	// ê°€ì†ì˜ ì •ë„ë¥¼ ì…ë ¥
 		if (start == true) {
 			switch (accAmount) {
 				case 1:
 					gear += 1;
 					speed += 20;
-					System.out.println("ÇöÀç ±â¾î: "+ gear + ", ÇöÀç ¼Óµµ:"+ speed);
+					System.out.println("í˜„ì¬ ê¸°ì–´: "+ gear + ", í˜„ì¬ ì†ë„:"+ speed);
 					break;
 				case 2:
 					gear += 2;
 					speed += 40;
-					System.out.println("ÇöÀç ±â¾î: "+ gear + ", ÇöÀç ¼Óµµ:"+ speed);
+					System.out.println("í˜„ì¬ ê¸°ì–´: "+ gear + ", í˜„ì¬ ì†ë„:"+ speed);
 					break;
 				case 3:
 					gear += 3;
 					speed += 80;
-					System.out.println("ÇöÀç ±â¾î: "+ gear + ", ÇöÀç ¼Óµµ:"+ speed);
+					System.out.println("í˜„ì¬ ê¸°ì–´: "+ gear + ", í˜„ì¬ ì†ë„:"+ speed);
 					break;
 				case 4:
 					gear += 4;
 					speed += 100;
-					System.out.println("ÇöÀç ±â¾î: "+ gear + ", ÇöÀç ¼Óµµ:"+ speed);
+					System.out.println("í˜„ì¬ ê¸°ì–´: "+ gear + ", í˜„ì¬ ì†ë„:"+ speed);
 					break;
 				default: 
 					gear += 5;
 					speed += 140;
-					System.out.println("ÇöÀç ±â¾î: "+ gear + ", ÇöÀç ¼Óµµ:"+ speed +"\nÃÖ´ë ±â¾î´Â 5´Ü ±îÁöÀÔ´Ï´Ù.");
+					System.out.println("í˜„ì¬ ê¸°ì–´: "+ gear + ", í˜„ì¬ ì†ë„:"+ speed +"\nìµœëŒ€ ê¸°ì–´ëŠ” 5ë‹¨ ê¹Œì§€ì…ë‹ˆë‹¤.");
 				}
 		} else {
-			System.out.println("ÇöÀç ½Ãµ¿ÀÌ "+ start + " ÀÔ´Ï´Ù.\n"+"½Ãµ¿À» ¸ÕÀú °É¾îÁÖ¼¼¿ä.");
+			System.out.println("í˜„ì¬ ì‹œë™ì´ "+ start + " ì…ë‹ˆë‹¤.\n"+"ì‹œë™ì„ ë¨¼ì € ê±¸ì–´ì£¼ì„¸ìš”.");
 		}
 	}
 	
-	void carNumIn() { // Â÷·® ¹øÈ£ ÀÔ·Â
-		System.out.println("Â÷·® ¹øÈ£¸¦ ÀÔ·ÂÇØ ÁÖ¼¼¿ä.");
+	void carNumIn() { // ì°¨ëŸ‰ ë²ˆí˜¸ ì…ë ¥
+		System.out.println("ì°¨ëŸ‰ ë²ˆí˜¸ë¥¼ ì…ë ¥í•´ ì£¼ì„¸ìš”.");
 		String CarNum = Input.nextLine();
-		System.out.println("Â÷·® ¹øÈ£: "+CarNum);
+		System.out.println("ì°¨ëŸ‰ ë²ˆí˜¸: "+CarNum);
 	}
 	
-	void blink() { // ºñ»ó ±ôºıÀÌ
+	void blink() { // ë¹„ìƒ ê¹œë¹¡ì´
 		for (int i=0 ; i<10 ; i++) {
 			System.out.print(blink +" ");
 			try{
